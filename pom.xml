@@ -3,7 +3,7 @@
 
     <groupId>com.github.jgonian</groupId>
     <artifactId>maven-cross-scala-compile_${scala.compat.version}</artifactId>
-    <version>0.2-SNAPSHOT</version>
+    <version>${build.version}</version>
 
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -13,6 +13,7 @@
         <scala.version>2.11.5</scala.version>
         <scala.compat.version>2.11</scala.compat.version>
         <bintray.package>maven-cross-scala-compile</bintray.package>
+        <build.version>0.1-SNAPSHOT</build.version>
     </properties>
 
     <distributionManagement>
