@@ -25,7 +25,7 @@
     </distributionManagement>
 
     <scm>
-        <connection>scm:git:ssh://git@github.com:jgonian/maven-cross-scala-compile.git</connection>
+        <connection>scm:git:https://github.com/jgonian/maven-cross-scala-compile.git</connection>
     </scm>
 
     <dependencies>
