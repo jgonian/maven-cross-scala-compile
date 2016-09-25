@@ -2,16 +2,26 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.jgonian</groupId>
-  <artifactId>cross-scala-compile</artifactId>
+  <artifactId>maven-cross-scala-compile</artifactId>
   <version>0.1-SNAPSHOT</version>
 
   <properties>
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
     <encoding>UTF-8</encoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <scala.version>2.11.5</scala.version>
     <scala.compat.version>2.11</scala.compat.version>
+    <bintray.package>maven-cross-scala-compile</bintray.package>
   </properties>
+
+  <distributionManagement>
+    <repository>
+      <id>bintray-jgonian-maven</id>
+      <name>jgonian-maven</name>
+      <url>https://api.bintray.com/maven/jgonian/maven/${bintray.package}/;publish=1</url>
+    </repository>
+  </distributionManagement>
 
   <dependencies>
     <dependency>
