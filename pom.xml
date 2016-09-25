@@ -3,7 +3,7 @@
 
     <groupId>com.github.jgonian</groupId>
     <artifactId>maven-cross-scala-compile_${scala.compat.version}</artifactId>
-    <version>0.3</version>
+    <version>0.4-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -26,7 +26,7 @@
 
     <scm>
         <connection>scm:git:https://github.com/jgonian/maven-cross-scala-compile.git</connection>
-      <tag>maven-cross-scala-compile_2.11-0.3</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <dependencies>
