@@ -23,6 +23,10 @@
     </repository>
   </distributionManagement>
 
+  <scm>
+    <connection>scm:git:ssh://git@github.com:jgonian/maven-cross-scala-compile.git</connection>
+  </scm>
+
   <dependencies>
     <dependency>
       <groupId>org.scala-lang</groupId>
@@ -48,6 +52,21 @@
   <build>
     <sourceDirectory>src/main/scala</sourceDirectory>
     <testSourceDirectory>src/test/scala</testSourceDirectory>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>3.0.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
 
     <plugins>
       <plugin>
