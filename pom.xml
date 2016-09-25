@@ -5,17 +5,6 @@
   <artifactId>cross-scala-compile</artifactId>
   <version>0.1-SNAPSHOT</version>
 
-  <name>${project.artifactId}</name>
-  <description>My wonderfull scala app</description>
-  <inceptionYear>2015</inceptionYear>
-  <licenses>
-    <license>
-      <name>My License</name>
-      <url>http://....</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
-
   <properties>
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
@@ -31,13 +20,13 @@
       <version>${scala.version}</version>
     </dependency>
 
-    <!-- Test -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${scala.compat.version}</artifactId>
@@ -49,9 +38,9 @@
   <build>
     <sourceDirectory>src/main/scala</sourceDirectory>
     <testSourceDirectory>src/test/scala</testSourceDirectory>
+
     <plugins>
       <plugin>
-        <!-- see http://davidb.github.com/scala-maven-plugin -->
         <groupId>net.alchim31.maven</groupId>
         <artifactId>scala-maven-plugin</artifactId>
         <version>3.2.2</version>
@@ -61,15 +50,10 @@
               <goal>compile</goal>
               <goal>testCompile</goal>
             </goals>
-            <configuration>
-              <args>
-                <arg>-dependencyfile</arg>
-                <arg>${project.build.directory}/.scala_dependencies</arg>
-              </args>
-            </configuration>
           </execution>
         </executions>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -77,8 +61,6 @@
         <configuration>
           <useFile>false</useFile>
           <disableXmlReport>true</disableXmlReport>
-          <!-- If you have classpath issue like NoDefClassError,... -->
-          <!-- useManifestOnlyJar>false</useManifestOnlyJar -->
           <includes>
             <include>**/*Test.*</include>
             <include>**/*Suite.*</include>
@@ -86,5 +68,6 @@
         </configuration>
       </plugin>
     </plugins>
+
   </build>
 </project>
