@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.jgonian</groupId>
-    <artifactId>maven-cross-scala-compile</artifactId>
+    <artifactId>maven-cross-scala-compile_${scala.compat.version}</artifactId>
     <version>0.5-SNAPSHOT</version>
 
     <properties>
@@ -126,7 +126,7 @@
                         <artifactId>maven-jar-plugin</artifactId>
                         <version>2.5</version>
                         <configuration>
-                            <finalName>${project.artifactId}_${scala.compat.version}-${project.version}</finalName>
+                            <finalName>${project.artifactId}-${project.version}</finalName>
                         </configuration>
                     </plugin>
 
@@ -172,7 +172,7 @@
                                     <file>target/${scala.compat.version}/pom.xml</file>
                                     <token>&lt;artifactId&gt;${project.artifactId}&lt;/artifactId&gt;</token>
                                     <!-- Replace to -->
-                                    <value>&lt;artifactId&gt;${project.artifactId}_${scala.compat.version}&lt;/artifactId&gt;</value>
+                                    <value>&lt;artifactId&gt;${project.artifactId}&lt;/artifactId&gt;</value>
                                     <outputDir>target/${scala.compat.version}/replacer</outputDir>
                                     <outputFile>pom.xml</outputFile>
                                 </configuration>
@@ -199,10 +199,10 @@
                                 </goals>
                                 <configuration>
                                     <groupId>${project.groupId}</groupId>
-                                    <artifactId>${project.artifactId}_${scala.compat.version}</artifactId>
+                                    <artifactId>${project.artifactId}</artifactId>
                                     <version>${project.version}</version>
                                     <packaging>${project.packaging}</packaging>
-                                    <file>${project.build.directory}/${project.artifactId}_${scala.compat.version}-${project.version}.jar</file>
+                                    <file>${project.build.directory}/${project.artifactId}-${project.version}.jar</file>
                                     <pomFile>${project.build.directory}/${scala.compat.version}/replacer/pom.xml</pomFile>
                                 </configuration>
                             </execution>
