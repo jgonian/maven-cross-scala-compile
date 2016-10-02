@@ -3,7 +3,7 @@
 
     <groupId>com.github.jgonian</groupId>
     <artifactId>maven-cross-scala-compile_${scala.compat.version}</artifactId>
-    <version>0.11-SNAPSHOT</version>
+    <version>0.8-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -105,8 +105,6 @@
                 <version>2.5.3</version>
                 <configuration>
                     <pomFileName>${project.build.directory}/${scala.compat.version}/replacer/pom.xml</pomFileName>
-                    <preparationGoals>clean verify</preparationGoals>
-                    <arguments>-Dcross-scala-compile -Dscala.compat.version=${scala.compat.version} -Dscala.version=${scala.version}</arguments>
                 </configuration>
             </plugin>
         </plugins>
