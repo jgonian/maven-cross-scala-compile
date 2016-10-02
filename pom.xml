@@ -105,6 +105,8 @@
                 <version>2.5.3</version>
                 <configuration>
                     <pomFileName>${project.build.directory}/${scala.compat.version}/replacer/pom.xml</pomFileName>
+                    <preparationGoals>clean verify</preparationGoals>
+                    <arguments>-Dcross-scala-compile -Dscala.compat.version=${scala.compat.version} -Dscala.version=${scala.version}</arguments>
                 </configuration>
             </plugin>
         </plugins>
